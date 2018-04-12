@@ -4,14 +4,14 @@
 
 
 % Function: "hlbackwards"
-& Take list as input and return reversed list
+% Take list as input and return reversed list
 
 hlbackwards([X|Y],Z,W) :- hlbackwards(Y,[X|Z],W).
 hlbackwards([],X,X).
 hlbackwards(A,R) :- hlbackwards(A,[],R).
 
 % Function: "llbackwards"
-& Take list as input and return reversed list (any sublists also reversed)
+% Take list as input and return reversed list (any sublists also reversed)
 
 llbackwards(L,R) :- rev(L,[],R).
 
@@ -26,7 +26,7 @@ rev([H|T],A,R) :-
 
 	
 % Function: "palindrome"
-& Take a list as input and return the same list if it is a palindrome
+% Take a list as input and return the same list if it is a palindrome
 % otherwise append the reverse of input list to create a new palindrome.
 
 palindrome([],[]).
@@ -112,9 +112,9 @@ hionah(N,X,Y,Z):-N>1,M is N-1,
   hionah(M,Z,Y,X).
 
   
- & Function "argue"
- & Takes a list of english words (Generally in the form of a statement) and returns the statement negated.
- & ---- More words could be added to the definition
+ % Function "argue"
+ % Takes a list of english words (Generally in the form of a statement) and returns the statement negated.
+ % ---- More words could be added to the definition
 
 argue(L,Result) :-
 
@@ -148,7 +148,7 @@ splitter([H|T],H,T).
 
 
 % Function "bubblesort"
-& input a list of numbers and returns the list in a sorted ascending order
+% input a list of numbers and returns the list in a sorted ascending order
 
 bubblesort(L,SortedL):-
     swap(L,L1),!,
